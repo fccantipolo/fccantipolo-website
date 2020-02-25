@@ -39,4 +39,4 @@ PRs are always welcome! Happy coding! 🎉🙌
 
 ## License
 
-[MIT License](https://github.com/fccantipolo/fccantipolo.github.io/blob/master/LICENSE)
+[MIT License](https://github.com/fccantipolo/fccantipolo-website/blob/master/LICENSE)
