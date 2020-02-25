@@ -3,10 +3,10 @@
     <div class="container">
       <div class="columns">
         <div class="column is-6">
-          <img class="seal" src="@/assets/images/fcc_secondary_large.png" alt="freeCodeCamp">
+          <g-image class="seal" src="~/assets/images/fcc_secondary_large.png" alt="freeCodeCamp" />
           <p>
-            <a :href="facebookGroup" target="_blank" rel="noopener noreferrer">freeCodeCamp {{ city }}</a> is not affiliated with or endorsed by <a :href="fcc" target="_blank" rel="noopener noreferrer">freeCodeCamp.org</a>.
-            We are an independent local study group/community learning to code through <a :href="fcc" target="_blank" rel="noopener noreferrer">freeCodeCamp.org</a>.
+            <a href="https://web.facebook.com/groups/freeCodeCamp.Antipolo" target="_blank" rel="noopener noreferrer">freeCodeCamp Antipolo</a> is not affiliated with or endorsed by <a href="https://freecodecamp.org/?ref=freeCodeCamp.Antipolo" target="_blank" rel="noopener noreferrer">freeCodeCamp.org</a>.
+            We are an independent local study group/community learning to code through <a href="https://freecodecamp.org/?ref=freeCodeCamp.Antipolo" target="_blank" rel="noopener noreferrer">freeCodeCamp.org</a>.
           </p>
           <p>
             All trademarks and other contents appearing in this site are property of it's respective owners.
@@ -19,24 +19,24 @@
           </h1>
           <ul>
             <li>
-              <nuxt-link to="/news">
-                /news
-              </nuxt-link>
+              <g-link to="/blog">
+                /blog
+              </g-link>
             </li>
             <li>
-              <nuxt-link to="/meetups">
+              <g-link to="/meetups">
                 /meetups
-              </nuxt-link>
+              </g-link>
             </li>
             <li>
-              <nuxt-link to="/resources">
+              <g-link to="/resources">
                 /resources
-              </nuxt-link>
+              </g-link>
             </li>
             <li>
-              <nuxt-link to="/about">
+              <g-link to="/about">
                 /about
-              </nuxt-link>
+              </g-link>
             </li>
           </ul>
         </div>
@@ -67,15 +67,3 @@
     </div>
   </footer>
 </template>
-
-<script>
-export default {
-  data () {
-    return {
-      city: this.$store.state.city,
-      facebookGroup: this.$store.state.facebookGroup,
-      fcc: `https://freecodecamp.org?ref=freeCodeCamp.${this.$store.state.city}`
-    }
-  }
-}
-</script>

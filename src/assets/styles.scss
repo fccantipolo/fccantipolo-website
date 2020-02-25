@@ -1,7 +1,10 @@
+// Import Roboto Mono from Google Fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+
+// Override bulma
 @import '~bulma/sass/utilities/initial-variables';
 @import '~bulma/sass/utilities/functions';
 
-// Overrides
 $primary: #0a0a23;
 $primary-invert: findColorInvert($primary);
 $link: $primary;
@@ -12,8 +15,10 @@ $body-overflow-y: auto;
 
 @import '~bulma';
 
+// Custom styling
 .logo {
   position: relative;
+  width: auto;
   bottom: -3px; // Align logo correctly with logo-suffix vertically
 }
 
@@ -54,6 +59,7 @@ footer.footer {
   & .seal {
     display: block;
     height: 25px;
+    width: auto;
     margin-bottom: 15px;
   }
 

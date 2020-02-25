@@ -1,6 +1,6 @@
 <template>
   <section class="hero is-medium is-primary has-background">
-    <img :src="heroImage" alt="" class="hero-background">
+    <g-image src="~/assets/images/background.jpg" alt="" class="hero-background" />
     <div class="hero-overlay" />
     <div class="hero-body">
       <div class="container">
@@ -11,7 +11,7 @@
             </h1>
             <h2 class="subtitle">
               We are a local community and study group learning to code through
-              <a :href="fcc" target="_blank" rel="noopener noreferrer">
+              <a href="https://freecodecamp.org/?ref=freeCodeCamp.Antipolo" target="_blank" rel="noopener noreferrer">
                 freeCodeCamp.org
               </a>
             </h2>
@@ -20,7 +20,7 @@
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
-                  :href="facebookGroup"
+                  href="https://web.facebook.com/groups/freeCodeCamp.Antipolo"
                   class="button is-primary is-rounded is-inverted"
                 >
                   Join the community
@@ -33,16 +33,3 @@
     </div>
   </section>
 </template>
-
-<script>
-export default {
-  data () {
-    return {
-      city: this.$store.state.city,
-      facebookGroup: this.$store.state.facebookGroup,
-      heroImage: this.$store.state.heroImage,
-      fcc: `https://freecodecamp.org?ref=freeCodeCamp.${this.$store.state.city}`
-    }
-  }
-}
-</script>
