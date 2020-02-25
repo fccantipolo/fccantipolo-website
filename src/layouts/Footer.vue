@@ -3,7 +3,7 @@
     <div class="container">
       <div class="columns">
         <div class="column is-6">
-          <g-image class="seal" src="~/assets/images/fcc_secondary_large.png" alt="freeCodeCamp" />
+          <img class="seal" src="@/assets/images/fcc_secondary_large.png" alt="freeCodeCamp" />
           <p>
             <a href="https://web.facebook.com/groups/freeCodeCamp.Antipolo" target="_blank" rel="noopener noreferrer">freeCodeCamp Antipolo</a> is not affiliated with or endorsed by <a href="https://freecodecamp.org/?ref=freeCodeCamp.Antipolo" target="_blank" rel="noopener noreferrer">freeCodeCamp.org</a>.
             We are an independent local study group/community learning to code through <a href="https://freecodecamp.org/?ref=freeCodeCamp.Antipolo" target="_blank" rel="noopener noreferrer">freeCodeCamp.org</a>.

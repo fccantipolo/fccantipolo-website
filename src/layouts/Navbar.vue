@@ -3,7 +3,7 @@
     <div class="container">
       <div class="navbar-brand">
         <g-link to="/" class="navbar-item">
-          <g-image class="logo" src="~/assets/images/fcc_primary_large.png" alt="freeCodeCamp" />
+          <img class="logo" src="@/assets/images/fcc_primary_large.png" alt="freeCodeCamp" />
           <h1 class="logo-suffix">
             | Antipolo
           </h1>
