@@ -14,6 +14,7 @@
           aria-label="menu"
           aria-expanded="false"
           data-target="navMenu"
+          @click.prevent="toggleMenu"
         >
           <span aria-hidden="true" />
           <span aria-hidden="true" />
@@ -22,17 +23,8 @@
       </div>
       <div id="navMenu" class="navbar-menu">
         <div class="navbar-end">
-          <g-link to="/blog" class="navbar-item">
-            /blog
-          </g-link>
-          <g-link to="/meetups" class="navbar-item">
-            /meetups
-          </g-link>
-          <g-link to="/resources" class="navbar-item">
-            /resources
-          </g-link>
-          <g-link to="/about" class="navbar-item">
-            /about
+          <g-link v-for="link in links" :key="link.id" :to="link.path" class="navbar-item">
+            {{ link.path }}
           </g-link>
         </div>
       </div>
@@ -42,20 +34,17 @@
 
 <script>
 export default {
-  mounted () {
-    // Get the "navbar-burger" element
-    const el = document.querySelector('.navbar-burger')
+  props: ['links'],
+  methods: {
+    toggleMenu () {
+      // Get the navbar-burger and navbar-menu elements
+      let $el = document.querySelector('.navbar-burger')
+      let $menu = document.querySelector(`#${$el.dataset.target}`)
 
-    el.addEventListener('click', () => {
-
-      // Get the target from the "data-target" attribute
-      const target = el.dataset.target
-      const $target = document.getElementById(target)
-
-      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-      el.classList.toggle('is-active')
-      $target.classList.toggle('is-active')
-    })
+      // Toggle classes of both elements
+      $el.classList.toggle('is-active')
+      $menu.classList.toggle('is-active')
+    }
   }
 }
 </script>

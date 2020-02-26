@@ -18,24 +18,9 @@
             Sitemap
           </h1>
           <ul>
-            <li>
-              <g-link to="/blog">
-                /blog
-              </g-link>
-            </li>
-            <li>
-              <g-link to="/meetups">
-                /meetups
-              </g-link>
-            </li>
-            <li>
-              <g-link to="/resources">
-                /resources
-              </g-link>
-            </li>
-            <li>
-              <g-link to="/about">
-                /about
+            <li v-for="link in links" :key="link.id">
+              <g-link :to="link.path">
+                {{ link.path }}
               </g-link>
             </li>
           </ul>
@@ -46,19 +31,9 @@
             freeCodeCamp
           </h1>
           <ul>
-            <li>
-              <a href="https://www.freecodecamp.org/news" target="_blank" rel="noopener noreferrer">
-                /news
-              </a>
-            </li>
-            <li>
-              <a href="https://www.freecodecamp.org/forum" target="_blank" rel="noopener noreferrer">
-                /forum
-              </a>
-            </li>
-            <li>
-              <a href="https://www.freecodecamp.org/learn" target="_blank" rel="noopener noreferrer">
-                /learn
+            <li v-for="fccLink in fccLinks" :key="fccLink.id">
+              <a :href="`https://www.freecodecamp.org${fccLink.path}?ref=freeCodeCamp.Antipolo`" target="_blank" rel="noopener noreferrer">
+                {{ fccLink.path }}
               </a>
             </li>
           </ul>
@@ -67,3 +42,12 @@
     </div>
   </footer>
 </template>
+
+<script>
+export default {
+  props: [
+    'links',
+    'fccLinks'
+    ]
+}
+</script>
