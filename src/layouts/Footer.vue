@@ -1,53 +1,44 @@
 <template>
   <footer class="footer">
     <div class="container">
-      <div class="columns">
-        <div class="column is-6">
-          <img class="seal" src="@/assets/images/fcc_secondary_large.png" alt="freeCodeCamp" />
+      <div class="columns is-centered is-multiline">
+
+        <Note />
+
+        <div class="column is-1" /> <!-- Offset -->
+        
+        <Sitemap :links="links" />
+
+        <div class="column is-1" /> <!-- Offset -->
+
+        <FCCLinks :fccLinks="fccLinks" />
+
+        <div class="column is-half has-text-centered">
           <p>
-            <a href="https://web.facebook.com/groups/freeCodeCamp.Antipolo" target="_blank" rel="noopener noreferrer">freeCodeCamp Antipolo</a> is not affiliated with or endorsed by <a href="https://freecodecamp.org/?ref=freeCodeCamp.Antipolo" target="_blank" rel="noopener noreferrer">freeCodeCamp.org</a>.
-            We are an independent local study group/community learning to code through <a href="https://freecodecamp.org/?ref=freeCodeCamp.Antipolo" target="_blank" rel="noopener noreferrer">freeCodeCamp.org</a>.
-          </p>
-          <p>
-            All trademarks and other contents appearing in this site are property of it's respective owners.
+            Made with ♥ by
+            <a href="https://github.com/fccantipolo" target="_blank" rel="noopener noreferrer">@fccantipolo</a>
           </p>
         </div>
-        <div class="column is-1" />
-        <div class="column is-2">
-          <h1 class="title is-5">
-            Sitemap
-          </h1>
-          <ul>
-            <li v-for="link in links" :key="link.id">
-              <g-link :to="link.path">
-                {{ link.path }}
-              </g-link>
-            </li>
-          </ul>
-        </div>
-        <div class="column is-1" />
-        <div class="column is-2">
-          <h1 class="title is-5">
-            freeCodeCamp
-          </h1>
-          <ul>
-            <li v-for="fccLink in fccLinks" :key="fccLink.id">
-              <a :href="`https://www.freecodecamp.org${fccLink.path}?ref=freeCodeCamp.Antipolo`" target="_blank" rel="noopener noreferrer">
-                {{ fccLink.path }}
-              </a>
-            </li>
-          </ul>
-        </div>
+
       </div>
     </div>
   </footer>
 </template>
 
 <script>
+import Note from '~/components/footer/Note.vue'
+import Sitemap from '~/components/footer/Sitemap.vue'
+import FCCLinks from '~/components/footer/FCCLinks.vue'
+
 export default {
+  components: {
+    Note,
+    Sitemap,
+    FCCLinks
+  },
   props: [
     'links',
     'fccLinks'
-    ]
+  ]
 }
 </script>
