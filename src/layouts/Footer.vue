@@ -16,7 +16,7 @@
         <div class="column is-half has-text-centered">
           <p>
             Made with ♥ by
-            <a href="https://github.com/fccantipolo" target="_blank" rel="noopener noreferrer">@fccantipolo</a>
+            <a href="https://github.com/fccantipolo/fccantipolo-website/graphs/contributors" target="_blank" rel="noopener noreferrer">@fccantipolo</a>
           </p>
         </div>
 
