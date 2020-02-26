@@ -37,7 +37,7 @@ export default {
   props: ['links'],
   methods: {
     toggleMenu () {
-      // Get the navbar-burger and navbar-menu elements
+      // Get the navbar-burger and navbar-menu element
       let $el = document.querySelector('.navbar-burger')
       let $menu = document.querySelector(`#${$el.dataset.target}`)
 
