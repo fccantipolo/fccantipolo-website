@@ -13,6 +13,11 @@
   ```
 3. Open the cloned repository with your favorite text editor.
 
+## Requirements
+
+1. Node 12.x (>=8.0.0)
+2. Yarn 1.21.1 (>=1.21)
+
 ## Development
 
 Install dependencies.
