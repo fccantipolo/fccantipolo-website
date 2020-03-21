@@ -8,5 +8,6 @@ module.exports = {
   siteName: 'freeCodeCamp Antipolo',
   titleTemplate: '%s',
   trailingSlash: false,
-  plugins: []
+  plugins: [],
+  siteUrl: "https://fccantipolo.netlify.com"
 }
