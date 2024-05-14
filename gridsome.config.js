@@ -9,5 +9,5 @@ module.exports = {
   titleTemplate: '%s',
   trailingSlash: false,
   plugins: [],
-  siteUrl: "https://fccantipolo.netlify.com"
+  siteUrl: "https://fccantipolo.netlify.app"
 }

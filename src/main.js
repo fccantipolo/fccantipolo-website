@@ -26,11 +26,11 @@ export default function (Vue, { router, head, isClient }) {
     },
     {
       property: 'og:image',
-      content: 'https://fccantipolo.netlify.com/banner.png'
+      content: 'https://fccantipolo.netlify.app/banner.png'
     },
     {
       property: 'og:url',
-      content: 'https://fccantipolo.netlify.com'
+      content: 'https://fccantipolo.netlify.app'
     },
     {
       property: 'og:type',
